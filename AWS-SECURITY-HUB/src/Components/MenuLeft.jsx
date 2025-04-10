@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { GiHamburgerMenu } from "react-icons/gi";
 const MenuLeft = () => {
   const MenuItems = [
     {name : "SecurityHub",
@@ -28,9 +28,17 @@ const MenuLeft = () => {
     },
   ]
   return (
-    <div className='left bg-[#151515]  w-2/10 border-r-1  border-[#585757] p-10'>
+    <>
+    
+    
+    <div className='left bg-[#151515] w-2/10 border-r-1 h-full border-[#585757] p-10 overflow-y-scroll overflow-x-hidden'>
+    <div className='hamburger'>
+        <GiHamburgerMenu className='w-10 h-10 text-white' />
+        </div>
      {
-       MenuItems.map((item)=>{
+       <div className="main-content">
+        {
+        MenuItems.map((item)=>{
           return(
             <div className='flex flex-col gap-3'>
          
@@ -51,11 +59,17 @@ const MenuLeft = () => {
           )
        }
       )
+    }
+       </div>
      }
     
      
     
     </div>
+    
+    
+    
+    </>
   )
 }
 
