@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const App = () => {
   return (
     <>
-    <div className='Main h-screen flex-col items-center justify-center'>
+    <div className='Main h-screen overflow-hidden flex-col items-center justify-center'>
       <Navbar/>
       <div className=' h-9/10 flex w-screen gap-5'>
         <MenuLeft/>

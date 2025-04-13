@@ -42,10 +42,10 @@ const MenuLeft = () => {
           return(
             <div className='flex flex-col gap-3'>
          
-                <p key={item.name} className='text-3xl font-semibold text-white mt-2'>{item.name}</p>
+                <p key={item.name} className='text-2xl font-semibold text-white mt-2'>{item.name}</p>
                 {
                  item.submenu && item.submenu.map((subitem)=>{
-                   return <p key={subitem.submenu_name} className=' text-xl font-medium text-white'>{subitem.submenu_name }</p>
+                   return <p key={subitem.submenu_name} className=' text-l font-medium text-white'>{subitem.submenu_name }</p>
                  })
 
 

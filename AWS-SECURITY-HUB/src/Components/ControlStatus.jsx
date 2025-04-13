@@ -12,7 +12,7 @@ const ControlStatus = (props) => {
   return (
     <div className='flex gap-3 items-center'>
     <div className={`${statusColors[props.status]} rounded-md w-6 h-6`}></div>
-    <h2 className=''>{props.count} {props.status}</h2>
+    <h2 className='text-xs'>{props.count} {props.status}</h2>
   </div>
   )
 }

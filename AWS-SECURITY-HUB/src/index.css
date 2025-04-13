@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 body{
   background-color: #0a0a0a;
 }
@@ -10,6 +11,13 @@ body{
 .hamburger{
   display: none;
 } 
+.allControls::-webkit-scrollbar{
+  display: none;
+}
+
+.filterBy::-webkit-scrollbar{
+  display: none;
+}
 /* 
  @media screen and (max-width : 1150px){
       .main-content{
@@ -18,4 +26,23 @@ body{
       .hamburger{
         display: block;
       }
+} */
+/* 
+@media screen and (max-width : 1200px){
+  .controls-overview-left{
+      width: 50vw;
+  }
+  .controls-overview-right{
+    width: 10vw;
+  }
+
+  .failed-check-text{
+      font-size: 0.6vw;
+  }
+}
+
+@media screen and (max-width : 1000px){
+    .controlsDashboard{
+      background-color: red;
+    }
 } */
