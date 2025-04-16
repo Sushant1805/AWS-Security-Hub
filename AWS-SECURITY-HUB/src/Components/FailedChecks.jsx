@@ -6,6 +6,10 @@ const FailedChecks = (props) => {
         HIGH: "bg-orange-500",
         MEDIUM: "bg-yellow-400",
         LOW: "bg-green-400",
+        Critical: "bg-red-800",
+        High: "bg-orange-500",
+        Medium: "bg-yellow-400",
+        Low: "bg-green-400",
     };
   return (
  

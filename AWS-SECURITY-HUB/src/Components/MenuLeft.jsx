@@ -40,7 +40,7 @@ const MenuLeft = () => {
         {
         MenuItems.map((item)=>{
           return(
-            <div className='flex flex-col gap-3'>
+            <div className='menuitems flex flex-col gap-3'>
          
                 <p key={item.name} className='text-2xl font-semibold text-white mt-2'>{item.name}</p>
                 {
