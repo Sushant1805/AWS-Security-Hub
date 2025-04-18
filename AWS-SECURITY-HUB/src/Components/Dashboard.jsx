@@ -1,17 +1,14 @@
 import React from "react";
 import FailedChecks from "./FailedChecks";
 import ControlStatus from "./ControlStatus";
-import { RxCrossCircled } from "react-icons/rx";
+
 import AppliedFilter from "./AppliedFilter";
+import BasicPie from "./BasicPie";
+import TickPlacementBars from "./TickPlacementBars";
+import DataTable from "./DataTable";
 const Dashboard = () => {
   var controlsCount = 501;
-  const controlStatus = [
-    { status: "Passed", count: "268" },
-    { status: "Failed", count: "17" },
-    { status: "No data", count: "6" },
-    { status: "Unknown", count: "1" },
-    { status: "Disabled", count: "209" },
-  ];
+
 
   const failedChecks = [
     { severity: "CRITICAL", count: "3" },
@@ -21,53 +18,49 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="right bg-[#010409] w-full h-full flex flex-col px-4 md:px-20 py-10 gap-5">
+    <div className="bg-[#010409] w-full h-fit flex flex-col px-4 md:px-20 py-10 gap-5">
       <h1 className="text-3xl text-white font-bold text-start">Controls</h1>
-
-      <div className="controlsDashboard border border-white rounded-2xl mt-5 text-white flex flex-col gap-2 py-10 px-5">
-        <h1 className="text-2xl font-semibold">Overview</h1>
-
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-col lg:flex-row gap-5">
-            {/* Left */}
-            <div className="w-full lg:w-7/12 gap-2 flex flex-col">
-              <h2 className="text-lg font-semibold underline">Security Score</h2>
-              <h1 className="text-5xl font-bold text-green-500">94%</h1>
-              <h5 className="text-md text-gray-400">268 out of 286 control passed</h5>
-              <h2 className="text-md font-semibold">Control Status</h2>
-              <div className="flex flex-wrap gap-4">
-                {controlStatus.map((item) => (
-                  <ControlStatus key={item.status} status={item.status} count={item.count} />
-                ))}
-              </div>
-            </div>
-
-            {/* Divider */}
-            <div className="hidden lg:block w-px bg-gray-200 mx-4" />
-
-            {/* Right */}
-            <div className="w-full lg:w-5/12 flex flex-col gap-2">
-              <h1 className="text-lg font-semibold underline">Failed Checks</h1>
-              <div className="flex items-baseline">
-                <h1 className="text-5xl font-bold">58 </h1>
-                <h4 className="text-md text-gray-300"> / 2893</h4>
-              </div>
-
-              <h1 className="text-sm font-semibold">Failed Checks by severity</h1>
-              <div className="flex  gap-4">
-                {failedChecks.map((item) => (
-                  <FailedChecks key={item} severity={item.severity} count={item.count} />
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="two_containers flex gap-5">
+          
+      <div className="controlsDashboard border border-white rounded-2xl mt-5   text-white flex bg-gray-800 w-5/10 py-5 px-5 ">
+        <div className="flex flex-col justify-center">
+          <h2 className="text-lg font-semibold underline">Security Score</h2>
+          <h1 className="text-5xl font-bold text-green-500">94%</h1>
+          <h5 className="text-md text-gray-400">
+            268 out of 286 control passed
+          </h5>
+          <h2 className="text-md font-semibold">Control Status</h2>
         </div>
-      </div>
+        <BasicPie className="text-white" />
+        </div>
+
+        <div className="controlsDashboard border border-white rounded-2xl mt-5   text-white flex bg-gray-800 w-5/10 py-5 px-5 ">
+        <div className="flex flex-col justify-center">
+        <h2 className="text-lg font-semibold underline">Failed Checks</h2>
+        <div className="flex items-baseline">
+                  <h1 className="text-5xl font-bold">58 </h1>
+                  <h4 className="text-md text-gray-300"> / 2893</h4>
+                </div>
+        </div>
+        <TickPlacementBars className="text-white" />
+        </div>
+
+
+        
+        </div>
+        <DataTable/>
+       
+
+        {/* Divider */}
+        {/* <div className="hidden lg:block w-px bg-gray-200 mx-4" /> */}
+
+        {/* Right */}
+        {/*  */}
+     
 
       {/* Bottom Section */}
       <div className="flex flex-col lg:flex-row gap-5">
-        {/* Filter By */}
-        <div className="filterBy text-white w-full lg:w-1/3 border border-white rounded-xl p-5 flex flex-col gap-2">
+        {/* <div className="filterBy text-white w-full lg:w-1/3 border border-white rounded-xl p-5 flex flex-col gap-2">
           <h1 className="text-xl font-semibold">Filter by</h1>
           <ul className="text-sm">
             <div className="flex flex-wrap gap-5">
@@ -91,10 +84,10 @@ const Dashboard = () => {
             <li>Passed</li>
             <li>Unknown</li>
             <li>No data</li>
-          </ul>
-        </div>
+          </ul> */}
+      </div>
 
-        {/* All Controls */}
+      {/* All Controls
         <div className="allControls h-100 text-white  w-full lg:w-2/3 border border-white rounded-xl p-5 flex flex-col gap-2 overflow-scroll ">
           <div className="flex flex-col sm:flex-row justify-between gap-4">
             <h1 className="text-xl font-semibold">All Controls ({controlsCount})</h1>
@@ -124,7 +117,7 @@ const Dashboard = () => {
           </div>
 
           {/* Table */}
-          <div className="flex flex-col gap-2 text-sm overflow-auto">
+      {/* <div className="flex flex-col gap-2 text-sm overflow-auto">
             <div className="grid grid-cols-2 sm:grid-cols-7 font-semibold gap-2">
               <div></div>
               <div>ID</div>
@@ -147,8 +140,7 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+        </div>*/}
     </div>
   );
 };
