@@ -14,8 +14,8 @@ const FailedChecks = (props) => {
   return (
  
     <div className='w-4/10'>
-            <div className={`font-semibold rounded-md p-1 text-center text-sm ${severityColors[props.severity]}`}>
-               <h1 className='failed-check-text '> {props.severity}</h1>
+            <div className={`font-semibold rounded-md w-15 p-1 text-center text-sm ${severityColors[props.severity]}`}>
+               <h1 className='failed-check-text w-3/10'> {props.severity}</h1>
             </div>
 
             <h1 className='font-semibold text-blue-500 text-md mt-2'>{props.count}</h1>

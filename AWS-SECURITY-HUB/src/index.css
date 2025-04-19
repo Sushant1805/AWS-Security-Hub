@@ -1,51 +1,5 @@
 @import "tailwindcss";
 
-
-body{
-  background-color: #010409;
-}
-
 *::-webkit-scrollbar{
-  display: none;
+    display: none;
 }
-.hamburger{
-  display: none;
-} 
-.allControls::-webkit-scrollbar{
-  display: none;
-}
-
-.filterBy::-webkit-scrollbar{
-  display: none;
-}
-
- @media screen and (max-width : 1150px){
-      .menuitems{
-        display: none;
-      }
-      .main-content{
-        height : 100vh;
-      }
-      .hamburger{
-        display: block;
-      }
-}
-/* 
-@media screen and (max-width : 1200px){
-  .controls-overview-left{
-      width: 50vw;
-  }
-  .controls-overview-right{
-    width: 10vw;
-  }
-
-  .failed-check-text{
-      font-size: 0.6vw;
-  }
-}
-
-@media screen and (max-width : 1000px){
-    .controlsDashboard{
-      background-color: red;
-    }
-} */
