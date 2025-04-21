@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { FiUpload } from "react-icons/fi";
-import FailedChecks from './FailedChecks';
-import WorkflowProgress from './WorkflowProgress';
+import FailedChecks from '../Components/FailedChecks';
+import WorkflowProgress from '../Components/WorkflowProgress';
+import Navbar from '../Components/Navbar';
+
 
 const Findings = () => {
   const dummyData = [
@@ -107,6 +109,8 @@ const Findings = () => {
     : dummyData;
 
   return (
+    <>
+    <Navbar/>
     <div className='bg-[#eaebf0] min-h-screen w-full flex justify-center px-4 py-6'>
       <div className='bg-[#f8f9fb] px-4 py-5 w-9/10 rounded-xl h-6/10 flex flex-col gap-5'>
         <h1 className='text-2xl font-semibold'>Findings</h1>
@@ -163,6 +167,7 @@ const Findings = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
