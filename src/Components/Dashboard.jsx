@@ -31,7 +31,7 @@ const Dashboard = () => {
           </h5>
           <h2 className="text-md font-semibold">Control Status</h2>
         </div>
-        <BasicPie className="text-white" />
+        <BasicPie  />
         </div>
 
         <div className="failed-checks  rounded-2xl  bg-white shadow-lg   flex  w-5/10 py-5 px-5 ">

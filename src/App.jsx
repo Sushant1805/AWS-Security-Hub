@@ -4,20 +4,11 @@ import Home from './Pages/Home';
 import Findings from './Pages/Findings';
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      Path:"./",
-      element:<Home/>
-    },
-    {
-      path : "/findings",
-      element:<Findings/>
-    }
-  ])
+  
  
   return (
     <>
-     <RouterProvider router = {router} />
+   
    <Findings/>
     
     

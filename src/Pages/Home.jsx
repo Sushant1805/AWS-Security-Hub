@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className='Main h-screen overflow-hidden flex-col items-center bg-[#eaebf0] justify-center'>
       <Navbar/> 
-       <Dashboard/>
+      <Dashboard/>
     </div>
   )
 }
